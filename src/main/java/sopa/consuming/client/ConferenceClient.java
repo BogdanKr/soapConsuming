@@ -15,7 +15,7 @@ public class ConferenceClient extends WebServiceGatewaySupport {
   public GetConferenceResponse getConferenceResponse(int id) {
     GetConferenceRequest request = new ObjectFactory().createGetConferenceRequest();
     request.setId(id);
-    LOGGER.info("Requesting for conference ig= " + id);
+    LOGGER.info("Requesting for conference id= " + id);
 
     GetConferenceResponse response = (GetConferenceResponse) getWebServiceTemplate()
         .marshalSendAndReceive("http://localhost:8080/ws/conferences", request,
